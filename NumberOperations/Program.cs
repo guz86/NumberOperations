@@ -22,7 +22,7 @@ namespace NumberOperations
 
             double a = double.Parse(str, numberFormatInfo);
             */
-
+            /*
             string str = "5,4asd";
 
             
@@ -36,6 +36,21 @@ namespace NumberOperations
                 Console.WriteLine("Ошибка конвертации.");
 
             }
+            */
+
+            string str = "55d";
+            int a;
+            bool result =  int.TryParse(str, out a);
+            if (result)
+            {
+                Console.WriteLine("Успешная конвертация");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка конвертации");
+            }
+            
+
 
         }
     }
