@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace NumberOperations
 {
@@ -6,10 +7,24 @@ namespace NumberOperations
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("test");
-            Console.WriteLine("test2");
+            // конвертация строки parse tryperse
+            // разделитель дробных чисел
+
+            // string str = "5.5";
+            // double a = double.Parse(str);
+
+            string str = "5.5";
+
+            NumberFormatInfo numberFormatInfo = new NumberFormatInfo()
+            {
+                NumberDecimalSeparator = ".",
+            };
+
+            double a = double.Parse(str, numberFormatInfo);
+            
+
+
+
         }
     }
 }
